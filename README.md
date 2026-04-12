@@ -18,6 +18,8 @@ Aplikasi ini adalah aplikasi berita berbasis React Native (Expo) yang menampilka
 - Halaman khusus Bookmark untuk melihat artikel yang telah disimpan.
 - Membagikan artikel ke aplikasi lain menggunakan fitur share.
 - Tema light/dark.
+- Offline mode dengan cached data
+- Detail artikel dengan WebView 
 
 ## Screenshot
 

@@ -3,7 +3,6 @@ import React, { useEffect, useMemo, useState } from "react";
 import {
   ActivityIndicator,
   FlatList,
-  Linking,
   Pressable,
   RefreshControl,
   SafeAreaView,
@@ -20,6 +19,7 @@ import { useNewsSearch } from "../../hooks/useSearch";
 import { newsService, Category } from "../../services/newsService";
 import { shareArticle } from "../../services/shareService";
 import { Article } from "../../types/article";
+import { useRouter } from "expo-router";
 
 const CATEGORIES: { label: string; value: Category }[] = [
   { label: "Umum", value: "general" },
@@ -45,6 +45,7 @@ export default function HomeScreen() {
   const [dateRange, setDateRange] = useState<DateRange>("all");
   const { isBookmarked, toggleBookmark } = useBookmarks();
   const { scheme } = useAppTheme();
+  const router = useRouter();
 
   const {
     data,
@@ -209,7 +210,7 @@ export default function HomeScreen() {
           renderItem={({ item }) => (
             <NewsCard
               article={item}
-              onPress={() => Linking.openURL(item.url)}
+              onPress={() => router.push({ pathname: "/article", params: { url: item.url } })}
               onShare={() => onShare(item)}
               onBookmark={() => toggleBookmark(item)}
               isBookmarked={isBookmarked(item.url)}

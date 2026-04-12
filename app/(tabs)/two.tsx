@@ -1,5 +1,6 @@
 import React from "react";
-import { FlatList, Linking, SafeAreaView, StyleSheet, Text } from "react-native";
+import { FlatList, SafeAreaView, StyleSheet, Text } from "react-native";
+import { useRouter } from "expo-router";
 import { NewsCard } from "../../components/NewsCard";
 import { useBookmarks } from "../../context/BookmarksContext";
 import { useAppTheme } from "../../context/ThemeContext";
@@ -8,6 +9,7 @@ import { shareArticle } from "../../services/shareService";
 export default function BookmarksScreen() {
   const { bookmarks, toggleBookmark, isBookmarked } = useBookmarks();
   const { scheme } = useAppTheme();
+  const router = useRouter();
 
   return (
     <SafeAreaView style={[styles.container, { backgroundColor: scheme === "dark" ? "#020617" : "#F8FAFC" }]}>
@@ -18,7 +20,7 @@ export default function BookmarksScreen() {
         renderItem={({ item }) => (
           <NewsCard
             article={item}
-            onPress={() => Linking.openURL(item.url)}
+            onPress={() => router.push({ pathname: "/article", params: { url: item.url } })}
             onShare={() => shareArticle(item)}
             onBookmark={() => toggleBookmark(item)}
             isBookmarked={isBookmarked(item.url)}
