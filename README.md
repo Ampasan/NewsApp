@@ -33,6 +33,11 @@ Aplikasi ini adalah aplikasi berita berbasis React Native (Expo) yang menampilka
   <img src="https://res.cloudinary.com/drrmbeiyk/image/upload/v1775832466/search_ntkldq.webp" alt="search" width="250" />
 </p>
 
+### Detail News
+<p align="center">
+  <img src="https://res.cloudinary.com/drrmbeiyk/image/upload/v1775991387/detail_rrqry6.webp" alt="detail" width="250" />
+</p>
+
 ### Bookmark
 <p align="center">
   <img src="https://res.cloudinary.com/drrmbeiyk/image/upload/v1775832466/bookmark_byrif7.webp" alt="book" width="250" />
