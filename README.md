@@ -1,10 +1,5 @@
 # News App
 
-## Informasi Mahasiswa
-
-- Nama : Naufal Rakan Ramadhan
-- NIM : 2410501042
-
 ## Deskripsi Aplikasi
 
 Aplikasi ini adalah aplikasi berita berbasis React Native (Expo) yang menampilkan daftar berita terbaru dari berbagai kategori. Pengguna dapat mencari berita, menyaring hasil berdasarkan sumber dan rentang waktu, membuka artikel asli melalui tautan, menyimpan artikel favorit ke bookmark, serta membagikan artikel ke aplikasi lain. Aplikasi juga mendukung tema terang/gelap untuk kenyamanan penggunaan.
